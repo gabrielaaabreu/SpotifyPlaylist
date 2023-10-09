@@ -1,20 +1,12 @@
-<template>
-    <div>
-        <router-link v-for="playlist in playlists" :key="playlist.id" to="/playlistdetail">
-                <img :src= "getImageUrl(playlist.capa)" alt="Capa da playlist" /> 
-        </router-link>
-    </div>
-</template>
-
 <script>
-export default {
-    data() {
-        return {
-            playlists: [
-                {
+
+export default ({
+    setup() {
+        const playlistsContent = [
+        {
                     id: 1,
                     nome: 'Lush Lofi',
-                    capa: "lush-lofi-playlist_resized.png",
+                    capa: "lush-lofi-playlist.jpg",
                     musicas: [
                         {
                             id: 10,
@@ -31,36 +23,36 @@ export default {
                 {
                     id: 2,
                     nome: 'Chill Lofi Beats',
-                    capa: "chill-lofi-beats_resized.png"
+                    capa: "chill-lofi-beats.jpg"
                 },
                 {
                     id: 3,
                     nome: 'Lofi Beats',
-                    capa: "lofi-beats_resized.png"
+                    capa: "lofi-beats.jpg"
                 },
                 {
                     id: 4,
                     nome: 'Lofi',
-                    capa: "lofi_resized.png"
+                    capa: "lofi.jpg"
                 },
                 {
                     id: 5,
                     nome: 'Chill Lofi Study Beats',
-                    capa: "study-beats-lofi_resized.png"
+                    capa: "study-beats-lofi.jpg"
                 },
                 {
                     id: 6,
                     nome: 'Study Lofi',
-                    capa: "study-lofi_resized.png"
+                    capa: "study-lofi.jpg"
                 }
-            ]
+        ]
 
-        };
-    },
-    methods: {
-        getImageUrl(name) {
-        return new URL(`../images/${name}`,import.meta.url).href
+        return {
+            playlistsContent
         }
-    }
-}
+    },
+})
 </script>
+
+ 
+
