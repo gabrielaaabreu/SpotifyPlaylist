@@ -3,8 +3,8 @@ import PlaylistComp from '../components/PlaylistComp.vue';
 </script>
 
 <template>
-    <div class="flex">
-        <p class="text-black text-2xl font-semibold">Playlists recomendadas</p>
-        <PlaylistComp />
+    <div class="flex flex-col items-center justify-center min-h-screen">
+        <p class="text-black text-4xl font-bold mb-4">Playlists recomendadas</p>
+        <PlaylistComp/>
     </div> 
 </template>
